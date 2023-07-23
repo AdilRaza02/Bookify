@@ -1,0 +1,72 @@
+[
+  {
+    "title": "The Great Adventure",
+    "author": "John Smith",
+    "publication_date": "2022-03-15",
+    "genre": "Adventure",
+    "publisher": "Adventure Press"
+  },
+  {
+    "title": "Cooking with Love",
+    "author": "Emily Johnson",
+    "publication_date": "2021-09-28",
+    "genre": "Cookbook",
+    "publisher": "Tasty Books"
+  },
+  {
+    "title": "Beyond the Stars",
+    "author": "Michael Turner",
+    "publication_date": "2020-11-10",
+    "genre": "Science Fiction",
+    "publisher": "Galaxy Publishers"
+  },
+  {
+    "title": "The Art of Happiness",
+    "author": "Linda Williams",
+    "publication_date": "2019-05-02",
+    "genre": "Self-Help",
+    "publisher": "Happiness Press"
+  },
+  {
+    "title": "Into the Wild",
+    "author": "David Johnson",
+    "publication_date": "2018-07-19",
+    "genre": "Biography",
+    "publisher": "Adventure Biographies"
+  },
+  {
+    "title": "The Lost Artifact",
+    "author": "Sarah Thompson",
+    "publication_date": "2022-01-05",
+    "genre": "Mystery",
+    "publisher": "Enigma Publications"
+  },
+  {
+    "title": "The Health Code",
+    "author": "Robert Green",
+    "publication_date": "2020-12-08",
+    "genre": "Health",
+    "publisher": "Healthwise Books"
+  },
+  {
+    "title": "The Haunted Manor",
+    "author": "Jennifer Lee",
+    "publication_date": "2019-10-30",
+    "genre": "Horror",
+    "publisher": "Spooky Publications"
+  },
+  {
+    "title": "The Secret Garden",
+    "author": "Lucy Martin",
+    "publication_date": "2021-06-14",
+    "genre": "Children's Fiction",
+    "publisher": "Wonderland Books"
+  },
+  {
+    "title": "The World Through the Lens",
+    "author": "Daniel Adams",
+    "publication_date": "2018-03-22",
+    "genre": "Photography",
+    "publisher": "LensCrafters"
+  }
+]
