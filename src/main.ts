@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './components/app/app.component';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
