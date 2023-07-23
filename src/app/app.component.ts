@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-import { BookComponent } from './book/book.component';
-import { HeaderComponent } from './header/header.component';
+import { BookComponent } from '../book/book.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [HeaderComponent, BookComponent],
 })
 export class AppComponent implements OnInit {
+  title = 'bookify';
+
   ngOnInit(): void {
     initFlowbite();
   }

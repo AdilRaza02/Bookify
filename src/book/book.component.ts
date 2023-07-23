@@ -1,16 +1,16 @@
+import {
+  getBooksLoading,
+  getBooks,
+  getBooksError,
+} from './../state/books/book.selectors';
+import { Book } from './../state/books/book.model';
 import { HttpClientModule } from '@angular/common/http';
-import { BookModalComponent } from './../book-modal/book-modal.component';
+import { BookModalComponent } from '../book-modal/book-modal.component';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { loadBooks } from '../store/books/book.actions';
-import {
-  getBooks,
-  getBooksError,
-  getBooksLoading,
-} from '../store/books/book.selectors';
-import { Book } from '../store/books/book.model';
+import { loadBooks } from '../state/books/book.actions';
 import { FormsModule } from '@angular/forms';
 import { AlertComponent } from '../alert/alert.component';
 import { CommonModule } from '@angular/common';

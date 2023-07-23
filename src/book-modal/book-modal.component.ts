@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Book } from '../store/books/book.model';
+import { Book } from '../state/books/book.model';
 import {
   FormBuilder,
   Validators,
@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 import { ModelFormGroup } from './book-modal.types';
 import { Store } from '@ngrx/store';
-import { addBook, deleteBook, updateBook } from '../store/books/book.actions';
+import { addBook, deleteBook, updateBook } from '../state/books/book.actions';
 import { CommonModule } from '@angular/common';
 
 @Component({

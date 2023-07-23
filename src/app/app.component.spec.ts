@@ -12,16 +12,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'books-task'`, () => {
+  it(`should have as title 'bookify'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('books-task');
+    expect(app.title).toEqual('bookify');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('books-task app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('bookify app is running!');
   });
 });

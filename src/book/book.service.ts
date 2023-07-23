@@ -2,7 +2,7 @@ import { switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, of, timer } from 'rxjs';
-import { Book } from '../store/books/book.model';
+import { Book } from '../state/books/book.model';
 
 @Injectable({
   providedIn: 'root',
