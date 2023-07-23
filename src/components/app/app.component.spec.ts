@@ -1,27 +1,38 @@
 import { TestBed } from '@angular/core/testing';
+import { render, RenderResult } from '@testing-library/angular';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from '../header/header.component';
+import { BookComponent } from '../book/book.component';
+import { Store } from '@ngrx/store';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [AppComponent]
-}));
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  let component: RenderResult<AppComponent>;
+  const initialState = {
+    books: [],
+    loading: false,
+    error: null,
+  };
+  beforeEach(async () => {
+    component = await render(AppComponent, {
+      imports: [HeaderComponent, BookComponent],
+      providers: [provideMockStore({ initialState })],
+    });
   });
 
-  it(`should have as title 'bookify'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('bookify');
+  it('should create', () => {
+    expect(component.fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('bookify app is running!');
+  it('should render the HeaderComponent', () => {
+    const headerComponent =
+      component.fixture.nativeElement.querySelector('app-header');
+    expect(headerComponent).toBeTruthy();
+  });
+
+  it('should render the BookComponent', () => {
+    const bookComponent =
+      component.fixture.nativeElement.querySelector('app-book');
+    expect(bookComponent).toBeTruthy();
   });
 });

@@ -1,21 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { render, RenderResult } from '@testing-library/angular';
 import { AlertComponent } from './alert.component';
 
 describe('AlertComponent', () => {
-  let component: AlertComponent;
-  let fixture: ComponentFixture<AlertComponent>;
+  let component: RenderResult<AlertComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-    imports: [AlertComponent]
-});
-    fixture = TestBed.createComponent(AlertComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(async () => {
+    component = await render(AlertComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component.fixture.componentInstance).toBeTruthy();
   });
 });

@@ -2,9 +2,9 @@
     <div class="mx-auto px-4 lg:px-12">
         <h2 class="mb-8 text-2xl font-bold">Your Favorite Books 🌟📚</h2>
 
-        <app-alert *ngIf="(loading$ | async)" message="Loading Books..." type="info"></app-alert>
+        <app-alert id="loadingAlert" *ngIf="(loading$ | async)" message="Loading Books..." type="info"></app-alert>
 
-        <app-alert *ngIf="(error$ | async) as error" [message]="error" type="error"></app-alert>
+        <app-alert id="errorAlert" *ngIf="(error$ | async) as error" [message]="error" type="error"></app-alert>
 
         <div *ngIf="!(error$ | async) && !(loading$ | async)"
             class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg">

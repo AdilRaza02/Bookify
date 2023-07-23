@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class BookComponent implements OnInit {
-  @ViewChild('bookModalRef', { static: false })
+  @ViewChild('bookModalRef')
   bookModalComponent!: BookModalComponent;
 
   public books$: Observable<Book[]> = new Observable<Book[]>();
