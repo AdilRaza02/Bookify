@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BookModalComponent } from './../book-modal/book-modal.component';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -10,11 +11,22 @@ import {
   getBooksLoading,
 } from '../store/books/book.selectors';
 import { Book } from '../store/books/book.model';
+import { FormsModule } from '@angular/forms';
+import { AlertComponent } from '../alert/alert.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css'],
+  standalone: true,
+  imports: [
+    AlertComponent,
+    FormsModule,
+    BookModalComponent,
+    CommonModule,
+    HttpClientModule,
+  ],
 })
 export class BookComponent implements OnInit {
   @ViewChild('bookModalRef', { static: false })

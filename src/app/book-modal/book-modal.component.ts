@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
 import { Book } from '../store/books/book.model';
-import { FormBuilder, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { ModelFormGroup } from './book-modal.types';
 import { Store } from '@ngrx/store';
 import { addBook, deleteBook, updateBook } from '../store/books/book.actions';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book-modal',
   templateUrl: './book-modal.component.html',
   styleUrls: ['./book-modal.component.css'],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
 })
 export class BookModalComponent {
   public bookForm!: ModelFormGroup<Book>;
