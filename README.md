@@ -1,8 +1,12 @@
 # Bookify - Educational Book List Application
 
+![Testing](https://github.com/AdilRaza02/Bookify/actions/workflows/tests.yml/badge.svg)
+
 ## Introduction
 
 Welcome to Bookify, a comprehensive educational book list application! Bookify is designed to provide a hands-on learning experience for developers interested in mastering Angular, NGRX, and unit testing using JEST. This educational project aims to enhance your understanding of modern web development concepts while building a functional and interactive web application.
+
+**Note: This codebase was submitted for an interview coding challenge.**
 
 ## Learning Objectives
 
