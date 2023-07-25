@@ -95,6 +95,5 @@ export class BookModalComponent {
 
   formReset() {
     document.getElementById('bookModalCloseButton')!.click();
-    this.bookForm.reset();
   }
 }
