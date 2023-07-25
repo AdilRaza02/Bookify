@@ -27,16 +27,16 @@ export const bookReducer = createReducer(
 
   on(BookActions.addBook, (state, { book }) => ({
     ...state,
-    books: [...state.books, book],
+    books: [...state.books, { ...book, id: state.books.length + 1 }],
   })),
 
   on(BookActions.updateBook, (state, { book }) => ({
     ...state,
-    books: state.books.map((b) => (b.title === book.title ? book : b)),
+    books: state.books.map((b) => (b.id === book.id ? book : b)),
   })),
 
-  on(BookActions.deleteBook, (state, { title }) => ({
+  on(BookActions.deleteBook, (state, { id }) => ({
     ...state,
-    books: state.books.filter((b) => b.title !== title),
+    books: state.books.filter((b) => b.id !== id),
   }))
 );

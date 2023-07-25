@@ -1,10 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { render, RenderResult } from '@testing-library/angular';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '../header/header.component';
 import { BookComponent } from '../book/book.component';
-import { Store } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
+import { RenderResult, render } from '@testing-library/angular';
 
 describe('AppComponent', () => {
   let component: RenderResult<AppComponent>;

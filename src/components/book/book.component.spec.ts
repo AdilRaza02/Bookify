@@ -58,6 +58,7 @@ describe('BookComponent', () => {
   it('should filter books based on search input', () => {
     const books: Book[] = [
       {
+        id: 1,
         title: 'Book 1',
         author: 'Author 1',
         publication_date: '2023-07-23',
@@ -65,6 +66,7 @@ describe('BookComponent', () => {
         publisher: 'Publisher 1',
       },
       {
+        id: 2,
         title: 'Book 2',
         author: 'Author 2',
         publication_date: '2023-07-24',

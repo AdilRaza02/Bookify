@@ -8,7 +8,11 @@ import {
 } from '@angular/forms';
 import { ModelFormGroup } from './book-modal.types';
 import { Store } from '@ngrx/store';
-import { addBook, deleteBook, updateBook } from '../../state/books/book.actions';
+import {
+  addBook,
+  deleteBook,
+  updateBook,
+} from '../../state/books/book.actions';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -30,6 +34,7 @@ export class BookModalComponent {
 
   initBookForm() {
     this.bookForm = this.formBuilder.nonNullable.group({
+      id: [0],
       title: ['', Validators.required],
       author: ['', Validators.required],
       publication_date: [
@@ -68,7 +73,9 @@ export class BookModalComponent {
     if (this.bookForm.valid) {
       switch (this.formType) {
         case 'Add':
-          this.store.dispatch(addBook({ book: this.bookForm.value as Book }));
+          this.store.dispatch(
+            addBook({ book: { ...this.bookForm.value } as Book })
+          );
           break;
 
         case 'Update':
@@ -82,9 +89,7 @@ export class BookModalComponent {
   }
 
   onBookFormDelete() {
-    this.store.dispatch(
-      deleteBook({ title: this.bookForm.getRawValue().title })
-    );
+    this.store.dispatch(deleteBook({ id: this.bookForm.getRawValue().id }));
     this.formReset();
   }
 

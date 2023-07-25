@@ -42,6 +42,7 @@ describe('BookModalComponent', () => {
     const form = fixture.componentInstance.bookForm;
     expect(form).toBeTruthy();
     expect(form.value).toEqual({
+      id: 0,
       title: '',
       author: '',
       publication_date: '',
@@ -54,6 +55,7 @@ describe('BookModalComponent', () => {
     fixture.componentInstance.openBookModal();
     expect(fixture.componentInstance.formType).toBe('Add');
     expect(fixture.componentInstance.bookForm.value).toEqual({
+      id: 0,
       title: '',
       author: '',
       publication_date: '',
@@ -64,6 +66,7 @@ describe('BookModalComponent', () => {
 
   it('should set formType to "Update" and open the modal with pre-filled form when openBookModal() is called with a book', () => {
     const book = {
+      id: 1,
       title: 'Book Title',
       author: 'Author',
       publication_date: '2023-07-23',
@@ -83,6 +86,7 @@ describe('BookModalComponent', () => {
     );
 
     const validBook = {
+      id: 1,
       title: 'Book Title',
       author: 'Author',
       publication_date: '2023-07-23',
@@ -105,6 +109,7 @@ describe('BookModalComponent', () => {
     );
 
     const validBook = {
+      id: 1,
       title: 'Book Title',
       author: 'Author',
       publication_date: '2023-07-23',
@@ -132,7 +137,7 @@ describe('BookModalComponent', () => {
 
     expect(dispatchSpy).toHaveBeenCalledWith(
       deleteBook({
-        title: fixture.componentInstance.bookForm.getRawValue().title,
+        id: fixture.componentInstance.bookForm.getRawValue().id,
       })
     );
   });
@@ -145,6 +150,7 @@ describe('BookModalComponent', () => {
     const hasHiddenClass = modalElement.classList.contains('hidden');
     expect(hasHiddenClass).toBe(true);
     expect(fixture.componentInstance.bookForm.value).toEqual({
+      id: 0,
       title: '',
       author: '',
       publication_date: '',
