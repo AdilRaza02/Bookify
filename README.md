@@ -6,8 +6,6 @@
 
 Welcome to Bookify, a comprehensive educational book list application! Bookify is designed to provide a hands-on learning experience for developers interested in mastering Angular, NGRX, and unit testing using JEST. This educational project aims to enhance your understanding of modern web development concepts while building a functional and interactive web application.
 
-**Note: This codebase was submitted for an interview coding challenge.**
-
 ## Learning Objectives
 
 Bookify focuses on several key learning objectives:
@@ -18,13 +16,11 @@ Bookify focuses on several key learning objectives:
 
 3. **Forms and User Input Handling**: Implement reactive forms and form validations.
 
-4. **Real-time Updates**: Achieve real-time updates without page refresh.
+4. **JSON Data Interaction**: Interact with external JSON data sources.
 
-5. **JSON Data Interaction**: Interact with external JSON data sources.
+5. **Error Handling and User Feedback**: Provide meaningful feedback for invalid inputs.
 
-6. **Error Handling and User Feedback**: Provide meaningful feedback for invalid inputs.
-
-7. **Unit Testing with JEST**: Write effective unit tests for Angular components and services.
+6. **Unit Testing with JEST**: Write effective unit tests for Angular components and services.
 
 ## UI Components
 
@@ -54,7 +50,7 @@ To start your educational journey with Bookify:
 
 2. Explore the project's Angular structure and NGRX state management.
 
-3. Experiment with adding books and observing real-time updates.
+3. Experiment with adding books.
 
 4. Run JEST tests for code verification.
 
